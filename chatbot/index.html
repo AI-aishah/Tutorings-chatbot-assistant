@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLSAC Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-app">
+    <header class="chat-header">
+      <h1>Tutorings Assistant</h1>
+      <p>Ask me anything about the ILETS exam</p>
+    </header>
+
+    <main id="chat-window" class="chat-window">
+      <!-- messages get added here by app.js -->
+    </main>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Type your question..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- Load order matters: data -> config -> gemini logic -> app glue -->
+  <script src="data.js"></script>
+  <script src="config.js"></script>
+  <script src="gemini.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
