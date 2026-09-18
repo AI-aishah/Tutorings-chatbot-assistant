@@ -2,7 +2,7 @@
 
 A lightweight, Gemini-powered chatbot that helps learners understand the IELTS exam. It answers common questions about test formats, sections, timings, and band scores through a friendly chat interface.
 
-Built collaboratively by Aishah and Hanouf.
+Built collaboratively with Hanouf.
 
 ![Tutorings IELTS Assistant chat interface](docs/images/chat-demo.png)
 
