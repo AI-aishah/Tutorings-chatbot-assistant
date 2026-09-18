@@ -1,0 +1,13 @@
+{
+  "name": "tutorings-ielts-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A secure, Gemini-powered IELTS study chatbot.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check chatbot/app.js && node --check chatbot/assistant.js && node --check chatbot/config.js && node --check chatbot/data.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

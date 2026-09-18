@@ -1,0 +1,8 @@
+# Local API configuration and environment variables
+.env
+.env.*
+!.env.example
+
+# Common local files
+node_modules/
+.DS_Store

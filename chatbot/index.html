@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutorings Assistant</title>
+  <title>Tutorings IELTS Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,30 +17,41 @@
         </svg>
       </div>
       <div>
-        <h1>Tutorings Assistant</h1>
-        <p>Ask me anything about ILETS</p>
+        <h1>Tutorings IELTS Assistant</h1>
+        <p>Clear answers about the IELTS test</p>
       </div>
     </header>
 
-    <main id="chat-window" class="chat-window">
+    <main id="chat-window" class="chat-window" aria-live="polite">
       <!-- messages get added here by app.js -->
     </main>
 
+    <section class="suggested-questions" aria-label="Suggested questions">
+      <p>Try asking:</p>
+      <div class="question-chips">
+        <button type="button" data-question="What are the IELTS test sections?">Test sections</button>
+        <button type="button" data-question="What is the difference between Academic and General Training?">Test formats</button>
+        <button type="button" data-question="How are IELTS band scores calculated?">Band scores</button>
+      </div>
+    </section>
+
     <form id="chat-form" class="chat-form">
+      <label class="sr-only" for="chat-input">Ask an IELTS question</label>
       <input
         id="chat-input"
         type="text"
-        placeholder="Type your question..."
+        placeholder="Ask an IELTS question..."
         autocomplete="off"
+        maxlength="300"
       />
-      <button type="submit">Send</button>
+      <button type="submit" disabled>Send</button>
     </form>
   </div>
 
-  <!-- Load order matters: data -> config -> gemini logic -> app glue -->
+  <!-- Load order matters: data -> safe config -> chat logic -> app glue -->
   <script src="data.js"></script>
   <script src="config.js"></script>
-  <script src="gemini.js"></script>
+  <script src="assistant.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

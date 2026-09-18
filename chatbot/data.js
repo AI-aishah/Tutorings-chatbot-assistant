@@ -60,3 +60,9 @@ const CHATBOT_DATA = [
     text: 'Both formats feature the exact same content, scoring, and level of difficulty. The paper test requires writing answers by hand, while the computer test requires typing. The Speaking module remains a face-to-face interview for both formats.',
   }
 ];
+
+// Let the Node server use the same source of truth without affecting the
+// browser, where this file is loaded as a normal script.
+if (typeof module !== 'undefined') {
+  module.exports = { CHATBOT_DATA };
+}
